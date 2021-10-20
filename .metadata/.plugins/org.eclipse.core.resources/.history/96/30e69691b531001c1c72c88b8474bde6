@@ -53,8 +53,11 @@ public class SellerDaoJDBC implements SellerDao{
 			rs = st.executeQuery();
 			
 			if(rs.next()) {
-				Department dep = instantiateDepartment(rs);				
-				Seller seller = instantiateSeller(rs, dep);
+				
+				Department dep = instantiateDepartment(rs);
+				
+				Seller seller = instantiateSeller(rs);
+				
 				return seller;
 			}
 			return null;

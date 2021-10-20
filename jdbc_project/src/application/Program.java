@@ -1,21 +1,16 @@
 package application;
 
-import java.util.Date;
-
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
-import model.entities.Department;
 import model.entities.Seller;
 
 public class Program {
 
 	public static void main(String[] args) {
-
-		Department obj = new Department(5, "Programs");
-		
-		Seller seller = new Seller(32, "Bob", "bob@gmail.com", new Date(), 3000.0, obj);
 		
 		SellerDao sellerDao = DaoFactory.createSellerDao();
+		
+		Seller seller = sellerDao.findById(5);
 		
 		System.out.println(seller);
 	}

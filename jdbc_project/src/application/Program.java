@@ -16,7 +16,6 @@ public class Program {
 		System.out.println("=== Test 1: Seller findById ===");
 		Seller seller = sellerDao.findById(5);
 		System.out.println(seller);
-		
 
 		System.out.println("\n=== Test 2: Seller findByDepartment ===");
 		Department department = new Department(2, null);
